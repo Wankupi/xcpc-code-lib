@@ -1,0 +1,21 @@
+\documentclass[../template.tex]{subfiles}
+
+\begin{document}
+
+\section{犯错记录}
+\begin{enumerate}
+	\item 数组开够！！！
+	      \begin{enumerate}
+		      \item 你是懂 maxn 的。不要 maxn 开够但是数组大小没有使用 maxn 定义。
+		      \item 询问是区间，要离散化，值域是 $2n$ （甚至 $3n$）！因为有区间有左右两个数。
+	      \end{enumerate}
+
+	\item 区间覆盖问题上，给定的是坐标形式$[l,r]$，转化为格点 $l\sim r-1$。
+	      如果需要离散化，要在数组中加入 $l,r-1,r$ 三个数，否则会导致夹在中间的区间被吞。
+
+	\item 能用点双、边双判的时候不要自己瞎写dfs，总会漏。
+
+\end{enumerate}
+
+
+\end{document}

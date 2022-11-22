@@ -1,0 +1,104 @@
+\documentclass[onecolumn,a4paper]{article}
+
+\usepackage[fontset=none]{ctex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{subfiles}
+\usepackage{currfile}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Noto Serif CJK SC}
+\setsansfont{Noto Sans}
+\setmonofont{JetBrains Mono}
+
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\setlength{\columnsep}{3em}
+
+\definecolor{CommentColor}{RGB}{0,128,0}
+\definecolor{StringColor}{RGB}{163,21,96}
+\definecolor{NumberColoe}{RGB}{64,99,133}
+
+\lstset{
+	language			=	c++,
+	basicstyle			=   \scriptsize\ttfamily,
+	keywordstyle		=   \color{blue},
+	identifierstyle		=	{},
+	commentstyle		=   \color{CommentColor}\itshape,
+	stringstyle			=   \color{StringColor}\ttfamily,
+	numberstyle			=   \color{NumberColoe}\ttfamily,
+	numbers				=   left,   % 行号的位置在左边
+	showspaces			=   false,  % 是否显示空格，显示了有点乱，所以不现实了
+	numbersep			=	0.7em,
+	showstringspaces	=   false,
+	captionpos			=   t,      % 这段代码的名字所呈现的位置，t指的是top上面
+	frame				=   lrtb,   % 显示边框
+	tabsize				=	2,
+	backgroundcolor=\color{white},
+	rulesepcolor= \color{green},
+	breaklines=true,
+	breakindent=1em,
+}
+
+\def\code#1{\lstinputlisting{\currfiledir#1}}
+
+\begin{document}
+
+\begin{titlepage}
+	\vspace{\stretch{1}}
+	\begin{center}
+		\includegraphics*[width=8cm]{icon-sjtu.png}
+
+		\vspace{2cm}
+	
+		{\huge ICPC / CCPC}
+		
+		{\Huge\bfseries Standard Code Library}
+		
+		\vspace{5cm}
+
+		{\fontsize{30pt}{30pt}\selectfont 吸风饮露}
+
+		\vspace{1cm}
+
+		{\fontsize{20pt}{20pt}\selectfont Drink Northwestern Wind}
+
+		\vspace{2cm}
+
+		{\huge 杨崇烨 \hspace{1cm} 刘泳霖 \hspace{1cm} 王鲲鹏}
+
+		\vspace{1cm}
+	\end{center}
+	\vspace{\stretch{1}}
+\end{titlepage}
+
+\begin{multicols*}{2}
+	\pagenumbering{Roman}
+	\tableofcontents
+\end{multicols*}
+
+\pagenumbering{arabic}
+\begin{multicols}{2}
+
+	\subfile{./string/string.tex}
+
+	\subfile{./math/math.tex}
+
+	\subfile{./graph/graph.tex}
+
+	\subfile{./dp/dp.tex}
+
+	\subfile{./error/error.tex}
+\end{multicols}
+	
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[../template.tex]{subfiles}
+
+\begin{document}
+
+\section{Graph}
+
+
+\subsection{无向图三圆环计数}
+\code{Tricycle.cpp}
+
+\subsection{Johnson全源最短路}
+\code{Johnson全源最短路.cpp}
+
+\subsection{Prufer序列}
+\code{Prufer序列.cpp}
+
+
+\subsection{tarjan}
+\subsubsection{割点}
+\code{tarjan/cutPoint.cpp}
+
+\subsection{网络流}
+\subsubsection{dinic}
+\code{dinic.cpp}
+\subsubsection{最小费用最大流}
+\code{MinCostMaxFlow.cpp}
+
+\subsection{树剖}
+\subsubsection{长链剖分 k级祖先}
+\code{k-ancestor.cpp}
+\subsection{虚实剖分 LCT}
+\code{LCT.cpp}
+
+\subsection{生成树}
+\subsubsection{圆方树}
+\code{生成树/圆方树.cpp}
+\subsubsection{最小乘积生成树}
+每条边有两个权值 $a_i$, $b_i$，求一棵生成树 $T$，使得
+\[
+	\left(\sum_{e\in T}a_e\right)\times\left(\sum_{e\in T}b_e\right)
+\]
+最小。
+\code{生成树/最小乘积生成树.cpp}
+\subsubsection{虚树}
+\code{生成树/虚树.cpp}
+
+\subsection{点分树}
+代码为在线求距离点 $x$ 的距离不超过 $k$ 的点的权值和。
+\code{PointDevideTree.cpp}
+
+\subsection{支配树}
+\code{DominatorTree.cpp}
+
+
+\subsection{k短路}
+\code{k短路.cpp}
+
+
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[../template.tex]{subfiles}
+
+\begin{document}
+
+\section{Math}
+
+\subsection{线性递推逆元}
+	要求 $mod$ 是质数。
+	\code{线性递推逆元.cpp}
+
+\subsection{扩展欧几里德}
+	\code{exgcd.cpp}
+
+\subsection{CRT \& exCRT}
+	\code{CRT.cpp}
+
+\subsection{Lucas \& exLucas}
+	对于 $mod$ 非质数的情形，对每个质因子 $p^c$ 分别处理，最后CRT合并。
+	
+	\code{exLucas.cpp}
+
+\subsection{BSGS}
+	\code{exBSGS.cpp}
+
+\subsection{筛法}
+	\subsubsection{Euler 筛}
+		\code{euler.cpp}
+	\subsubsection{杜教筛}
+		\code{DuJiaoShai.cpp}
+	\subsubsection{Min\_25 筛}
+		代码中求的是 $f(p^c)=(p^c)^2-p^c$ 的前缀和。
+		算其他多项式应改动的是 g 和 sp。
+		\code{min_25.cpp}
+
+\subsection{原根}
+
+
+\subsection{Gauss Elimination - 行列式}
+	\code {gauss-det.cpp}
+
+	\subsubsection{LGV Lemma}
+		\[
+		M=
+		\begin{pmatrix}
+		e(a_1,b_1) & e(a_1,b_2) & \cdots & e(a_1,b_n) \\
+		e(a_2,b_1) & e(a_2,b_2) & \cdots & e(a_2,b_n) \\
+		\vdots & \vdots & \ddots & \vdots \\
+		e(a_n,b_1) & e(a_n,b_2) & \cdots & e(a_n,b_n) \\
+		\end{pmatrix}
+		\]
+
+		\[
+		\mathrm{det}(M)=\sum_{P:A\to B}{\mathrm{sign}(\sigma(P))\prod_{i=1}^{n}\omega(P_i)}
+		\]
+
+	\subsubsection{Matrix Tree 定理}
+		\[
+		L_{ij}=\left\{
+			\begin{matrix}
+				\vert \text{edges}(i,j)\vert & i\not=j \\
+				\operatorname{degree}(i) & i=j
+			\end{matrix}
+			\right.
+		\]
+
+\subsection{自适应 Simpson}
+	\code{Simpson.cpp}
+
+\subsection{多项式}
+	\subsubsection{FWT}
+	\code{FWT.cpp}
+
+
+\end{document}
