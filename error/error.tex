@@ -8,6 +8,7 @@
 	      \begin{enumerate}
 		      \item 你是懂 maxn 的。不要 maxn 开够但是数组大小没有使用 maxn 定义。
 		      \item 询问是区间，要离散化，值域是 $2n$ （甚至 $3n$）！因为有区间有左右两个数。
+		      \item dp 状态存在负数，需要偏移时，数组是双倍的。
 	      \end{enumerate}
 
 	\item 区间覆盖问题上，给定的是坐标形式$[l,r]$，转化为格点 $l\sim r-1$。
